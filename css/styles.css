@@ -51,3 +51,12 @@ color: white;
 text-align: center;
 padding: 15px;
 }
+
+button {
+    background-color: #7045a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
