@@ -1,37 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>claudia perea | perfil</title>
-    <link rel="stylesheet" href="../mi-perfil/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claudia Perea | Portafolio</title>
+
+  <!-- Tailwind (más adelante): descomenta la línea siguiente para probarlo con el CDN.
+       Puedes mezclarlo con styles.css; las clases propias usan prefijo para no chocar. -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <link rel="stylesheet" href="../mi-perfil/css/styles.css ">
 </head>
 <body>
-    <header>
-        <h1>Claudia Andrea Perea Mosquera</h1>
-                    <img src="../mi-perfil/img/mariposa.jpg" alt="Foto de perfil de Claudia Andrea Perea Mosquera" width="200" height="150">
-            <h4>Coder de Riwi | Desarrolladora de Software en formación</h4>
-    </header>
 
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>Me interesa el mundo de la tecnología y el desarrollo web.
-            Actualmente estoy fortaleciendo mis habilidades en programación, 
-            algoritmia y creación de soluciones digitales.
-            </p>
-            <p>
-                Soy Coder de Riwi, apasionada por la tecnología y el aprendizaje
-                constante. Actualmente cuento con conocimientos en HTML, CSS
+  <header class="site-header">
+    <a class="logo" href="#inicio">Clauudia!!</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+      <div class="hero__text">
+        <h1>Hello, i'm Claudia Perea.<br> ¡I enjoy constant learning! </h1>
+        <h3>Coder de Riwi | Desarrolladora de Software en formación.</h3>
+        <a class="btn" href="#sobre-mi">Conóceme</a>
+      </div>
+      <div class="hero__shapes" aria-hidden="true">
+        <span class="shape shape--triangle"></span>
+        <span class="shape shape--square"></span>
+        <span class="shape shape--circle"></span>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="about">
+      <h2>Sobre mí</h2>
+
+      <div class="about__grid">
+
+        <a class="shape-btn shape-btn--triangle pos-tl" href="#proyectos">Proyectos</a>
+        <a class="shape-btn shape-btn--square pos-tr" href="#skills">Skills</a>
+        <a class="shape-btn shape-btn--circle pos-bl" href="#contacto">Contacto</a>
+        <a class="shape-btn shape-btn--diamond pos-br" href="#inicio">Volver</a>
+
+        <!-- Espejo: clic para voltear -->
+        <button class="mirror" id="mirror" type="button" aria-pressed="false">
+          <span class="mirror__inner">
+
+            <span class="mirror__face mirror__front">
+              ¡CLICK! ¡CLICK! <br> ¡DESCUBREME!</span>
+
+            <span class="mirror__face mirror__back">
+             <img class="photo" src="../mi-perfil/img/foto-perfil.png" alt="Foto de Claudia Perea">
+              <span class="mirror__content">
+                <strong>Claudia Perea</strong>
+                <span>Me interesa el mundo de la tecnología y el desarrollo web. <br> Actualmente estoy fortaleciendo mis habilidades en programación,
+                     algoritmia y creación de soluciones digitales.</span>
+                <span> Soy Coder de Riwi, actualmente cuento con conocimientos en HTML, CSS
                 y algoritmia, áreas en las que continúo desarrollando mis
                 habilidades para construir soluciones digitales funcionales
-                y creativas.
-            </p>
+                y creativas.</span>
 
-        </section>
-        <section id="habilidades">
-            <h2>Mis habilidades</h2>
+                <span class="values">
+                  <em>Amabilidad</em>
+                  <em>Honestidad</em>
+                  <em>Curiosidad</em>
+                </span>
+              </span>
+            </span>
 
-            <article>
+          </span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- SECCIONES DE DESTINO (placeholders) -->
+    <section id="proyectos" class="block">
+      <h2>Proyectos</h2>
+      <article>
+                <h3>Rueda Libre</h3>
+
+                <p>
+                    Desarrollo de una página web para una empresa dedicada
+                    al alquiler de bicicletas en Medellín.
+                </p>
+
+                <p>
+                    <strong>Tecnologías utilizadas:</strong> HTML, CSS y Tailwind CSS.
+                </p>
+
+                <p>
+                    El objetivo del proyecto es crear una presencia digital
+                    para la empresa, presentando sus servicios y su información
+                    de contacto y reserva de manera clara y atractiva para los usuarios.
+                </p>
+
+                <p><strong>Mi papel en el proyecto:</strong> desarrollo total de la interfaz de usuario, la implementación de las funcionalidades frontend y el diseño responsivo.</p>
+
+
+                <button class="btn" onclick="window.location.href='https://claudianperea.github.io/Rueda-Libre/index.html'">Ver proyecto</button> 
+            </article>
+
+    </section>
+
+    <section id="skills" class="block block--alt">
+      <h2>Skills</h2>
+      <article>
                 <h3>Desarrollo web</h3>
                 <ul>
                     <li>HTML</li>
@@ -47,35 +129,25 @@
                     <li>Resolución de problemas</li>
                 </ul>
             </article>
+    </section>
 
-        </section>
+    <section id="contacto" class="block">
+      <h2>Contacto</h2>
+      <p>Escríbeme a <a href="mailto:andrea07082006@gmail.com">andrea07082006@gmail.com</a></p>
+    </section>
 
-        <section id="proyectos">
-            <h2>Mis proyectos</h2>
+  </main>
 
-            <article>
-                <h3>Rueda Libre</h3>
+  <footer class="site-footer">
+    <p>© 2026 Claudia Andrea Perea Mosquera</p>
+  </footer>
 
-                <p>
-                    Desarrollo de una página web para una empresa dedicada
-                    al alquiler de bicicletas en Medellín.
-                </p>
-
-                <p><strong>Tecnologías:</strong> HTML y CSS.</p>
-
-                <p>
-                    El objetivo del proyecto es crear una presencia digital
-                    para la empresa, presentando sus servicios y su información
-                    de contacto y reserva de manera clara y atractiva para los usuarios.
-                </p>
-                <button onclick="window.location.href='https://claudianperea.github.io/Rueda-Libre/'">Ver proyecto</button> 
-            </article>
-
-        </section>
-
-
-    <footer>
-    <p>&copy; 2026 Claudia Andrea Perea Mosquera. Todos los derechos reservados.</p>
-    </footer>
+  <script>
+    const mirror = document.getElementById('mirror');
+    mirror.addEventListener('click', () => {
+      const flipped = mirror.classList.toggle('is-flipped');
+      mirror.setAttribute('aria-pressed', flipped);
+    });
+  </script>
 </body>
 </html>
