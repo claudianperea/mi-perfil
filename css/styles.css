@@ -1,21 +1,6 @@
-/* ===== Variables (paleta de la imagen) ===== */
-:root {
-  --violet: #5e2d87;   /* morado profundo */
-  --orchid: #c48cc4;   /* lila / orquídea */
-  --cream:  #fff3e6;   /* crema */
-  --butter: #fdeab0;   /* amarillo suave */
-  --rose:   #ee8c9c;   /* rosa */
-  --ink:    #24103a;   /* morado casi negro: bordes y texto sobre claro (derivado de la paleta) */
-
-  --bg: var(--violet);
-  --fg: var(--cream);
-
-  --border: 6px solid var(--ink);
-  --shadow: 10px 10px 0 var(--ink);
-
-  --font: "Arial Black", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Courier New", Courier, monospace;
-}
+/* ===== Variables =====
+   La paleta y los temas (claro / oscuro) están en src/input.css.
+   Aquí se usan con var(--bg), var(--fg), var(--link), etc. */
 
 /* ===== Base ===== */
 *, *::before, *::after { box-sizing: border-box; }
@@ -35,9 +20,9 @@ h1, h2 { font-family: var(--font); line-height: 1; margin: 0 0 1rem 1rem; }
 h1 { font-size: clamp(2.2rem, 7vw, 5rem); }
 h2 { font-size: clamp(1.8rem, 5vw, 3rem); }
 
-a { color: var(--butter); }
+a { color: var(--link); }
 
-:focus-visible { outline: 4px solid var(--butter); outline-offset: 4px; }
+:focus-visible { outline: 4px solid var(--link); outline-offset: 4px; }
 
 /* ===== Header (Flexbox) ===== */
 .site-header {
@@ -65,8 +50,21 @@ a { color: var(--butter); }
 }
 
 .nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.nav a { color: var(--cream); font-weight: bold; }
+.nav a { color: var(--fg); font-weight: bold; }
 .nav a:hover { background: var(--butter); color: var(--ink); }
+
+/* Botón de cambio de tema */
+.theme-toggle {
+  font-family: var(--font);
+  font-size: 0.9rem;
+  padding: 0.2rem 0.8rem;
+  background: var(--butter);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+}
+.theme-toggle:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
 
 /* ===== Hero (Flexbox) ===== */
 .hero {

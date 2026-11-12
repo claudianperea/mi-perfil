@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+
+    --violet: #5e2d87;
+    --orchid: #c48cc4;
+    --cream:  #fff3e6;
+    --butter: #fdeab0;
+    --rose:   #ee8c9c;
+    --ink:    #24103a;
+
+    /* MODO CLARO (por defecto)*/
+    --bg: var(--cream);
+    --fg: var(--violet);
+    --link: var(--violet);
+
+    --border: 6px solid var(--ink);
+    --shadow: 10px 10px 0 var(--ink);
+
+    --font: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Courier New", Courier, monospace;
+  }
+
+  /* MODO ACTUAL (el que se activa con el botón) */
+  :root.dark {
+    --bg: var(--violet);
+    --fg: var(--cream);
+    --link: var(--butter);
+  }
+}
